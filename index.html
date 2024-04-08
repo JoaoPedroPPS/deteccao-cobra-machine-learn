@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Cobras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <main class="main">
+            <h1>Sistema de Classificação de Cobras</h1>
+        </main>
+        <div class="center-align">
+            <div class="limit-size">
+                <div class="content-details">
+                    <div class="details">
+                        <details>
+                            <summary>Descrição do Projeto</summary>
+                            <p>Mini sistema de classificação de imagens para identificar o tipo de cobra entre Mamba Negra, Coral, Cobra Cipó e Nenhuma.</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="load-image">
+                    <img id="preview" src="./background.jpg" width="250" alt="Imagem de Pré-visualização" />
+                </div>
+                <div class="send-image">
+                    <label for="image_snake">
+                        <p id="location-src">Clique para adicionar sua imagem</p>
+                        <input
+                            type="file"
+                            name="image"
+                            id="image_snake"
+                            onchange="previewImage()"
+                        />
+                    </label>
+                    <button class="btn" onclick="init()">Enviar</button>
+                </div>
+                <div class="options">
+                    <ul id="options">
+                        <li id="mamba_negra">Mamba Negra</li>
+                        <li id="coral">Coral</li>
+                        <li id="cipo">Cobra Cipó</li>
+                        <li id="none">Nenhuma</li>
+                    </ul>
+                </div>
+                <div class="limit-size">
+                    <div class="content-details">
+                        <div class="details">
+                            <details>
+                                <summary>Curiosidade sobre a Cobra</summary>
+                                <div id="curiosidadeCobra" class="curiosidade"></div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="label-container" class="ending"><h3>Projeto desenvolvidos por alunos do IFSULDEMINAS - João Pedro e João Lucas</h3></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

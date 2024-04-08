@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+body {
+    background: url("./background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents backdrop-filter from affecting scrolling content */
+    position: relative; /* Needed for overlay */
+    min-height: 100vh; /* Ensures full height */
+
+    /* Frosted Glass Effect */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+
+body::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    font-family: 'Lato', sans-serif;
+    background: rgb(2, 0, 36);
+    background: -moz-linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 0.5158438375350141) 0%,
+        rgba(9, 121, 52, 0.4822303921568627) 35%,
+        rgba(0, 212, 255, 0.6643032212885154) 100%
+    );
+    background: -webkit-linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 0.5158438375350141) 0%,
+        rgba(9, 121, 52, 0.4822303921568627) 35%,
+        rgba(0, 212, 255, 0.6643032212885154) 100%
+    );
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 0.5158438375350141) 0%,
+        rgba(9, 121, 52, 0.4822303921568627) 35%,
+        rgba(0, 212, 255, 0.6643032212885154) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
+}
+
+.ending {
+    color: #fff;
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+main.main {
+    background-color: #020024;
+    padding: 20px 0 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main.main h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.details {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,146,0.5102415966386555) 100%);
+    padding: 15px 7px 15px 7px;
+    border-radius: 5px;
+    margin-top: 80px; /* Adicionado para ajustar o espaço entre o cabeçalho e o conteúdo */
+}
+
+details {
+    max-width: 920px;
+    color: #111;
+    margin: 0 auto; /* Centralizando o conteúdo */
+}
+
+details p {
+    padding: 20px 0 20px 0;
+}
+
+.center-align {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding-top: 20px; /* Adicionado para ajustar o espaço entre o conteúdo e o cabeçalho */
+}
+
+.limit-size {
+    width: 900px;
+    position: relative;
+}
+
+.content-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    cursor: pointer;
+}
+
+.send-image {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-top: 20px; /* Adicionado para ajustar o espaço entre o conteúdo e o cabeçalho */
+}
+
+.send-image button.btn {
+    border: none;
+    background-color: rgb(56, 87, 201);
+    padding: 1rem;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+}
+
+.send-image label {
+    max-width: 760px;
+    padding: 0.7rem;
+    border: 1px solid #fff;
+    border-radius: 0.6rem;
+    width: 100%;
+    background-color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: all 1s;
+}
+
+.send-image label input[type="file"] {
+    display: none;
+}
+
+.send-image label:hover {
+    background-color: rgb(139, 164, 238);
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.options ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.options ul li:nth-child(2n) {
+    background-color: rgb(0, 141, 75);
+    padding: 20px 50px;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.options ul li:nth-child(2n + 1) {
+    background-color: rgb(98, 112, 190);
+    padding: 20px 40px;
+    border: none;
+                border-radius: 0.5rem;
+            }
+
+        .example-selector {
+        } 
+
+            .options ul li.select {
+                border: 4px solid #fff;
+                padding: 15px 40px;
+            }
+
+            .load-image {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+
+            .load-image img {
+                border: 10px solid white;
+                border-radius: 10px;
+                max-height: 200px;
+                object-fit: cover;
+            }
+
+            @media (max-width: 575px) {
+                .center-align {
+                    flex-direction: column; /* Empilhar elementos verticalmente */
+                    padding: 0 20px; /* Ajustar o preenchimento para telas menores */
+                }
+                .options ul {
+                    flex-direction: column; /* Garantir que as opções sejam empilhadas */
+                }
+                .options ul li,
+                .send-image button.btn {
+                    width: 100%; /* Fazer com que os botões e opções tenham largura total */
+                    margin-bottom: 10px; /* Espaçar os elementos */
+                }
+                main.main {
+                    position: relative; /* Evitar posição fixa em telas muito pequenas */
+                    padding: 10px 0; /* Reduzir o preenchimento */
+                }
+                .details,
+                .send-image label,
+                .options ul li {
+                    font-size: 0.8rem; /* Reduzir ainda mais o tamanho da fonte para legibilidade */
+                }
+                .details {
+                    margin-top: 20px; /* Adicionar um pouco de espaço entre os detalhes e o cabeçalho */
+                }
+                .content-details {
+                    flex-direction: column; /* Empilhar elementos verticalmente */
+                    top: 0; /* Ajustar a posição */
+                }
+            } 
+
+            /* Tablets e dispositivos com largura até 768px */
+            @media (max-width: 768px) {
+                .limit-size {
+                    width: 95%; /* Aumentar a largura para usar mais espaço disponível */
+                    padding: 0 10px; /* Adicionar um pouco de preenchimento nas laterais */
+                }
+                .options ul li {
+                    padding: 15px 30px; /* Ajustar o preenchimento para manter o conteúdo visível */
+                }
+                .details {
+                    padding: 10px; /* Reduzir o preenchimento para economizar espaço */
+                }
+            }
+
+            /* Smartphones e dispositivos com largura até 575px */
+            @media (max-width: 575px) {
+                .center-align {
+                    flex-direction: column; /* Empilhar elementos verticalmente */
+                    padding-top: 60px; /* Aumentar o espaço no topo para o cabeçalho */
+                }
+                .options ul {
+                    flex-direction: column; /* As opções devem ser empilhadas verticalmente */
+                }
+                .options ul li,
+                .send-image button.btn {
+                    width: 100%; /* Botões e opções ocupam toda a largura */
+                    margin-bottom: 10px; /* Espaçar elementos verticalmente */
+                }
+                main.main {
+                    position: relative; /* Mudar para posição relativa */
+                    padding: 20px 0; /* Ajustar o preenchimento superior e inferior */
+                }
+                .details,
+                .send-image label,
+                .options ul li {
+                    font-size: 0.8rem; /* Diminuir o tamanho da fonte para melhor ajuste */
+                }
+                .details {
+                    margin-top: 20px; /* Espaço adicional acima dos detalhes */
+                }
+                .content-details {
+                    position: relative; /* Mudar para posição relativa para melhor ajuste */
+                    top: 0; /* Resetar o deslocamento superior */
+                }
+                details {
+                    max-width: 100%; /* Assegurar que os detalhes não excedam a largura da tela */
+                }
+            }
