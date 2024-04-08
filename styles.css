@@ -54,8 +54,13 @@ body::before {
     font-size: 1.0rem;
 }
 
+@font-face {
+    font-family: "SnakeHoliday";
+    src: url('./fonts/SnakeHoliday.otf') format('opentype');
+  }
+
 main.main {
-    background-color: #020024;
+    background: linear-gradient(135deg, #088108, #473261);
     padding: 20px 0 20px 0;
     position: fixed;
     top: 0;
@@ -66,7 +71,8 @@ main.main {
 
 main.main h1 {
     color: #fff;
-    font-size: 1.5rem;
+    font-family: "SnakeHoliday", sans-serif;
+    font-size: 1.9rem;
     text-align: center;
 }
 
